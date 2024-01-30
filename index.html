@@ -5,45 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Exam Grade Calculator</title>
     <style>
+        /* Add your CSS styles here */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-        }
-        h3 {
-            color: #333;
-        }
-        marquee {
-            color: #007BFF;
-        }
-        img {
-            width: 200px;
+            margin: 20px;
         }
         table {
-            margin: 20px auto;
+            width: 100%;
             border-collapse: collapse;
-            width: 80%;
+            margin-top: 20px;
         }
         th, td {
-            padding: 10px;
-            border: 1px solid #ddd;
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
+        th {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
     <h3>Final Exam Grade Calculator</h3>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqqp6Ets9gGG59SYbQqA4lhx6QNwzERnjj7A&usqp=CAU" alt="logo">
-    <marquee>---------  Calculate Final Exam Grade  --------</marquee>
-    <div id="app"></div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqqp6Ets9gGG59SYbQqA4lhx6QNwzERnjj7A&usqp=CAU" width="200" alt="Logo">
+    <marquee>---------  Final Exam Grade Calculator   --------</marquee>
 
-    <script src="app.js"></script>
+    <form id="inputForm">
+        <!-- Add your HTML input fields here -->
+        <label for="mark">Final Exam Grade (Symbol):</label>
+        <input type="text" id="mark" name="mark" required><br>
+
+        <label for="med">Midterm Exam Grade:</label>
+        <input type="number" id="med" name="med" required><br>
+
+        <label for="jobs">Classwork Grade:</label>
+        <input type="number" id="jobs" name="jobs" required><br>
+
+        <label>Exam Type:</label>
+        <input type="radio" id="chek1" name="chek" value="واجهي" required>
+        <label for="chek1">واجهي</label>
+        <input type="radio" id="chek2" name="chek" value="مدمج" required>
+        <label for="chek2">مدمج</label><br>
+
+        <button type="button" onclick="calculateGrade()">Calculate</button>
+    </form>
+
+    <div id="outputDiv"></div>
+
+    <script>
+        // Add your JavaScript code here
+        function calculateGrade() {
+            // Implement the calculation logic using JavaScript
+            // ...
+
+            // Example output
+            var outputDiv = document.getElementById("outputDiv");
+            outputDiv.innerHTML = "<h4>Calculation Result:</h4>" +
+                "<p>Final Exam Grade: <span id='finalGradeSymbol'></span></p>" +
+                "<p>Expected Grades: <span id='expectedGrades'></span></p>" +
+                "<button onclick='location.reload()'>Go Back</button>";
+        }
+    </script>
 </body>
 </html>
